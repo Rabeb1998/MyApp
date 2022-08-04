@@ -1,0 +1,93 @@
+{
+  "employeeList": [
+    {
+      "fullName": "Rabeb Ali",
+      "email": "rabebali7@gmail.com",
+      "mobile": "255877",
+      "city": "kebili",
+      "gender": "Female",
+      "department": "",
+      "Date": "2022-07-16T23:00:00.000Z",
+      "isPermanent": true,
+      "id": 1
+    },
+    {
+      "fullName": "flen",
+      "email": "flen@gmail.com",
+      "mobile": "5741000000",
+      "city": "tunis",
+      "gender": "Male",
+      "department": "",
+      "Date": "2022-07-09T23:00:00.000Z",
+      "isPermanent": false,
+      "id": 2
+    },
+    {
+      "fullName": "salah ali",
+      "email": "salah@gmail.com",
+      "mobile": "5555555",
+      "city": "tunis",
+      "gender": "Male",
+      "department": "",
+      "Date": "2022-07-09T23:00:00.000Z",
+      "isPermanent": "",
+      "id": 3
+    },
+    {
+      "fullName": "noura",
+      "email": "noura@yahoo.fr",
+      "mobile": "87459841",
+      "city": "ariana",
+      "gender": "Female",
+      "department": "",
+      "Date": "2022-07-30T23:00:00.000Z",
+      "isPermanent": true,
+      "id": 4
+    },
+    {
+      "fullName": "rania",
+      "email": "raniaali@gmail.com",
+      "mobile": "789456123",
+      "city": "ariana",
+      "gender": "Female",
+      "department": "",
+      "Date": "2022-07-18T23:00:00.000Z",
+      "isPermanent": true,
+      "id": 5
+    },
+    {
+      "fullName": "ali",
+      "email": "aa@gmail.com",
+      "mobile": "255877",
+      "city": "tunis",
+      "gender": "Male",
+      "department": "",
+      "Date": "2022-07-12T23:00:00.000Z",
+      "isPermanent": "",
+      "id": 6
+    },
+    {
+      "fullName": "amal",
+      "email": "amal@gmail.com",
+      "mobile": "4789651",
+      "city": "kebili",
+      "gender": "Other",
+      "department": "",
+      "Date": "2022-07-09T23:00:00.000Z",
+      "isPermanent": "",
+      "id": 7
+    }
+  ],
+  "Department": [
+    {
+      "Domain": "",
+      "Department": "",
+      "TeamID": "",
+      "Role": "",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,12 @@
+<!-- <mat-toolbar>
+<mat-toolbar-row> -->
+<app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+<!-- </mat-toolbar-row>
+</mat-toolbar> -->
+<app-body 
+[collapsed]="isSidenavCollapsed"
+[screenWidth]="screenWidth"
+>
+
+</app-body>
+
