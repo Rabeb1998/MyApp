@@ -1,0 +1,35 @@
+<h1 class="container " style="text-align: center;"> Didn't find what you want? Create a ticket now!</h1>
+<h4 class="container " style="text-align: center;">We are very responsive in our service. You will receive a response within 48 hours.</h4>
+<form [formGroup]="newForm" (ngSubmit)="add()" class="container"> 
+    <div class="container mt-3">
+      <label for="title" class="form-label">Title</label>
+      <input formControlName="title" type="text" class="form-control" id="title" autocomplete="off">
+      <span *ngIf="newForm.get('title')?.invalid && newForm.get('title')?.touched" class="text-danger">
+         <strong>title</strong> is required
+
+      </span>
+    </div>
+    <br>
+    
+    <div class="container mb-3">
+        <label for="name" class="form-label">your name</label>
+        <input formControlName="name" type="text" class="form-control" id="name" autocomplete="off">
+        <span *ngIf="newForm.get('name')?.invalid && newForm.get('name')?.touched" class="text-danger">
+            <strong>your name</strong> is required
+   
+         </span>  
+    </div>
+       
+       <br>
+      <div class="container mb-3">
+        <label for="text" class="form-label">Text</label>
+        <textarea formControlName="text" type="text" class="form-control" id="text" autocomplete="off" rows="8"></textarea>
+        <span *ngIf="newForm.get('text')?.invalid && newForm.get('text')?.touched" class="text-danger">
+            <strong>text</strong> is required
+   
+         </span>
+      </div>
+      <button type="submit" [disabled]="newForm.invalid" class="btn btn-primary " style="float: right;">Send</button>
+      <button routerLink="/helps" class="btn btn-secondary">Return</button>
+
+  </form>

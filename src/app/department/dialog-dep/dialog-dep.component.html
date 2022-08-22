@@ -1,43 +1,112 @@
-<h1 mat-dialog-title>Add </h1>
-<div mat-dialog-content> 
-    <form [formGroup]="departmentForm">
-        <mat-form-field appearance="fill">
-            <mat-label>Domain</mat-label>
-            <input matInput placeholder="Domain">
-           
-        </mat-form-field>
-    
-          <mat-form-field appearance="fill">
-            <mat-label>Department</mat-label>
-            <input matInput placeholder="Department">
-           
-          </mat-form-field>
-    
-          <mat-form-field appearance="fill">
-            <mat-label>Team ID</mat-label>
-            <input matInput placeholder="Team ID">
-           
-          </mat-form-field>
-    
-    
-          <mat-form-field appearance="fill">
-            <mat-label>Role</mat-label>
-            <mat-select placeholder="Role">
-            <mat-option value="Leader">Leader</mat-option>
-            <mat-option value="1">1</mat-option>
-            <mat-option value="2">2</mat-option>
-            <mat-option value="3">3</mat-option>
-            <mat-option value="4">4</mat-option>
-            <mat-option value="5">5</mat-option>
-            <mat-option value="6">6</mat-option>
-            <mat-option value="7">7</mat-option>
-        </mat-select>
-        </mat-form-field>
-    
-    </form>
-    </div>
-    <div mat-dialog-action [align]="'end'">
-        <button style="margin-left : 8px;" mat-raised-button color="primary" (click)="addDep()">save</button>
-        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+<h1 mat-dialog-title>Add new Activity </h1>
+<div class="container-fluid" rowHeight="300px">
+  <form  [formGroup]="departmentForm">
+  <div class="card" >
+    <div class="card-header text-center">Add new Activity</div>
+    <div class="card-body">
+
+
+        <div class="row">
+          <div class="col-sm-4">
+               <mat-form-field appearance="outline">
+                  <mat-label>Title</mat-label>
+                  <input matInput  formControlName="title">
+                  <!-- <mat-error *ngIf="(f.title.dirty && f.title.invalid==true )">
+                    
+                  </mat-error> -->
+                </mat-form-field>
+          </div>
+          <div class="col-sm-3">
+             <mat-form-field appearance="outline">
+                      <mat-label>department</mat-label>
+                      <mat-select formControlName="department">
+                        <mat-option value="">
+                          None
+                        </mat-option>
+                         <mat-option value="1">
+                          Dev
+                        </mat-option>
+                        <mat-option value="1">
+                          RH
+                        </mat-option>
+                        <mat-option value="1">
+                         Control
+                        </mat-option>
+                        <!-- <mat-option *ngFor="let department of departmentlist"
+                          [value]="department.id">
+                          {{department.title}
+                        </mat-option> -->
+                      </mat-select>
+                    </mat-form-field>
+          </div>
+          <div class="col-sm-4">
+               <mat-form-field appearance="outline">
+                  <mat-label>description</mat-label>
+                  <textarea matInput  formControlName="description"></textarea>
+                </mat-form-field>
+          </div>
+          <!-- <div class="col-sm-1">
+            <button mat-mini-fab color="primary"><i class="fa fa-plus" aria-hidden="true"></i></button>
+          </div> -->
+        </div>
+        <form [formGroup]="departmentForm" #indentAddForm=ngForm  (ngSubmit)="OnSubmit()" > 
+                <div class="row">
+                  <div class="col-sm-12 table-responsive" formArrayName="item">
+                    <div class="card-header text-center">Team Information</div>
+
+                    <table class="table">
+                     
+                      <thead>
+                        <tr >
+                          <th style="white-space: nowrap;padding-right: 4em;float:center"><span class="required-field"></span>Employee Name</th>
+                          <th style="white-space: nowrap;padding-right: 4em;float:center"> email </th>
+                          <th style="white-space: nowrap;padding-right: 4em;float:center">Job Position </th>
+                          <th style="white-space: nowrap;padding-right: 4em;float:center">work sought</th>
+                          <th style="white-space: nowrap;padding-right: 4em;float:center">description</th>
+                        </tr>
+
+                      </thead>
+                      <tbody>
+
+                        <tr *ngFor="let it of formArr.controls; let i=index"  [formGroupName]="i">
+                          <td style="white-space: nowrap;"> <input  id="Employee_Name{{i}}" formControlName="Employee_Name" class="form-control"></td>
+                          <!-- <td style="white-space: nowrap;"> <input readonly id="email{{i}}" formControlName="email" class="form-control"></td> -->
+                           <!-- <td> <input formControlName="bf_stock" readonly id="bfStock{{i}}" class="form-control reset"></td> -->
+                            <td> <textarea id="email{{i}}" formControlName="email" class="form-control reset"></textarea></td>
+                            <td> <textarea formControlName="job_position" class="form-control reset"></textarea></td>
+                            <td > 
+                              <mat-form-field >
+                                <mat-select formControlName="work_sought">
+                                  <mat-option value="full Time">full Time</mat-option>
+                                  <mat-option value="Temporary">Temporary</mat-option>
+                                  <mat-option value="Permanant">Permanant</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                            </td>
+                            <td> <textarea formControlName="Description2" class="form-control reset"></textarea></td>
+                           <td> <button *ngIf="formArr.controls.length > 1" (click)="delete(i)" class="btn btn-danger"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></td>
+
+                           </tr>
+                      </tbody>
+
+
+                      <tfoot>
+                        <tr><td> <button type="button" (click)="addNew()" class="btn btn-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></td></tr>
+                      </tfoot>
+                    </table>
+                </div>
+                <div class="button-row">
+                  <button mat-raised-button color="primary" type="submit" id ="view" (click)="addNew()">{{actionBtn}}</button>
+                  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+              </div>
+
+              </div>
+             </form> 
 
     </div>
+    <div class="card-footer">
+    </div>
+  </div>
+</form>
+
+</div>    

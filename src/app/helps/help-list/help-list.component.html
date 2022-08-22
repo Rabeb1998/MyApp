@@ -1,0 +1,47 @@
+<div class="row mat-3">
+    <div class="col-lg-6">
+        <h1>Reclamation List</h1>
+
+    </div>
+    <div class="col-lg-6">
+        <button class="btn btn-success" routerLink="/new" style="float: right; margin:5px;">Add</button>
+    </div>
+
+</div>
+
+<table *ngIf="listHelps.length > 0"  class="table table-hover mt-3">
+    <thead>
+        <tr>
+            <td>Title</td>
+            <td>Name</td>
+            <td>Text</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let help of listHelps">
+            <td>
+            <a [routerLink]="['/see',1]">
+                {{help.title}}
+            </a>
+            </td>
+            <td>{{help.name}}</td>
+            <td>{{help.text}}</td>
+            <td>{{help.date_reclamation | date}}</td>
+            <td style="width: 10%;">
+                <button class="btn btn-primary btn-sm float-end">edit</button>
+            </td>
+            <td style="width: 10%;">
+                <button class="btn btn-danger btn-sm float-end">delete</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+<div *ngIf="listHelps.length==0" class="row mt-5">
+    <h3>
+        No Reclamation
+    </h3>
+
+</div>

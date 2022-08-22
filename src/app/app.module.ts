@@ -25,11 +25,15 @@ import {MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import {MatInputModule} from '@angular/material/input';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import { EmployeServService } from './employee/employe-serv.service';
+import { EmployeServService } from './services/employee/employe-serv.service';
 import { DialogDepComponent } from './department/dialog-dep/dialog-dep.component';
 import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
+import { HelpListComponent } from './helps/help-list/help-list.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SeeAllComponent } from './helps/see-all/see-all.component';
+import { NewComponent } from './helps/new/new.component';
 
 
 @NgModule({
@@ -43,6 +47,10 @@ import {MatSortModule} from '@angular/material/sort';
     HelpsComponent,
     DialogEmpComponent,
     DialogDepComponent,
+    HelpListComponent,
+    NavbarComponent,
+    SeeAllComponent,
+    NewComponent,
     
    
   ],
@@ -69,10 +77,12 @@ import {MatSortModule} from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+
     
     
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

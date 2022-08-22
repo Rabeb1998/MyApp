@@ -16,17 +16,17 @@ describe('AppComponent', () => {
 
   it('should create the app' , () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
   it('should have as title UI' , () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('UI');
   });
 
-  xit(`should render title 'UI'`, () => {
+  xit(`should render title `, () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
@@ -35,3 +35,16 @@ describe('AppComponent', () => {
  
   
 });
+
+//  //  smoke test
+//  describe('AppModule', () => {
+//   beforeEach(() => {
+//     TestBed.configureTestingModule({
+//     });
+//   });
+
+//   it('initializes', () => {
+//     const module = TestBed.inject(AppModule);
+//     expect(module).toBeTruthy();
+//   });
+// });

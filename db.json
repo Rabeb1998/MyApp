@@ -1,17 +1,6 @@
 {
   "employeeList": [
     {
-      "fullName": "Rabeb Ali",
-      "email": "rabebali7@gmail.com",
-      "mobile": "255877",
-      "city": "kebili",
-      "gender": "Female",
-      "department": "",
-      "Date": "2022-07-16T23:00:00.000Z",
-      "isPermanent": true,
-      "id": 1
-    },
-    {
       "fullName": "flen",
       "email": "flen@gmail.com",
       "mobile": "5741000000",
@@ -80,11 +69,36 @@
   ],
   "Department": [
     {
-      "Domain": "",
-      "Department": "",
-      "TeamID": "",
-      "Role": "",
-      "id": 1
+      "title": "job",
+      "department": "1",
+      "description": "",
+      "item": [
+        {
+          "Employee_Name": "rabeb",
+          "description": "",
+          "email": "aa@gmail.com",
+          "job_position": "chef",
+          "work_sought": "Temporary",
+          "action": ""
+        }
+      ],
+      "id": 2
+    },
+    {
+      "title": "jib",
+      "department": "1",
+      "description": "",
+      "item": [
+        {
+          "Employee_Name": "",
+          "description": "",
+          "email": "",
+          "job_position": "",
+          "work_sought": "",
+          "action": ""
+        }
+      ],
+      "id": 4
     }
   ],
   "profile": {

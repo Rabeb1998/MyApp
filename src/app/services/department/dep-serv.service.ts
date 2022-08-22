@@ -14,4 +14,13 @@ export class DepServService {
   getDepartment (){
     return this.http.get<any>("http://localhost:3000/Department/");
   }
+
+  deleteDep (id:number){
+    return this.http.delete<any>("http://localhost:3000/Department/"+id);
+   }
+   putDep (data:any, id: number){
+    return this.http.put<any>("http://localhost:3000/Department/"+id, data);
+
+   }
+  
 }

@@ -28,7 +28,7 @@
             <mat-grid-tile>
                 <div class="controles-container">
                     <div class="add-bottom-padding">
-                        <mat-radio-group formControlName="gender">
+                        <mat-radio-group ControlName="gender">
                             <mat-radio-button class="radio-button" *ngFor="let gender of genderList" [value]="gender"> 
                                 {{gender}}
                             </mat-radio-button>
@@ -47,11 +47,11 @@
                         <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
                     <div class="add-bottom-padding">
-                        <mat-checkbox formControlName="isPermanent">Permanent Employee</mat-checkbox>
+                        <mat-checkbox ControlName="isPermanent">Permanent Employee</mat-checkbox>
                     </div>
                     <div mat-dialog-action [align]="'end'"></div>
                     <div class="button-row">
-                        <button mat-raised-button color="primary" type="submit" (click)="addemployee()">{{actionBtn}}</button>
+                        <button mat-raised-button color="primary" type="submit" id="view" (click)="addemployee()">{{actionBtn}}</button>
                         <button mat-raised-button color="warn" mat-dialog-close>Close</button>
                     </div>
                 </div>

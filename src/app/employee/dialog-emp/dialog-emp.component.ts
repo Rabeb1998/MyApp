@@ -1,7 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { EmployeServService } from '../employe-serv.service';
+import { activity } from 'src/app/models/activity.model';
+import { DepServService } from 'src/app/services/department/dep-serv.service';
+import { EmployeServService } from '../../services/employee/employe-serv.service';
 @Component({
   selector: 'app-dialog-emp',
   templateUrl: './dialog-emp.component.html',
@@ -11,11 +13,11 @@ export class DialogEmpComponent implements OnInit {
 genderList=["Male", "Female", "Other"];
  employeeForm!: FormGroup;
 actionBtn : string ="Save"
- 
+
  constructor(private formBuilder:FormBuilder,
   @Inject(MAT_DIALOG_DATA) public editData: any ,
   private emp: EmployeServService,
-   private dialogRef: MatDialogRef<DialogEmpComponent>) { }
+   public dialogRef: MatDialogRef<DialogEmpComponent>) { }
 
  ngOnInit(): void {
   this.employeeForm=this.formBuilder.group({

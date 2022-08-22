@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeServService } from './employe-serv.service';
+import { EmployeServService } from '../services/employee/employe-serv.service';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { ViewChild} from '@angular/core';
 import { DialogEmpComponent } from './dialog-emp/dialog-emp.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
-import { ApiService } from '../shared/api.service';
 
 @Component({
   selector: 'app-employee',
@@ -19,7 +18,7 @@ export class EmployeeComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort
-  constructor(private dialog : MatDialog, private emp : EmployeServService) { }
+  constructor(public dialog : MatDialog, private emp : EmployeServService) { }
 
   ngOnInit(): void {
     this.getAllemployee();

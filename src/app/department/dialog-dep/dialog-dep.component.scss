@@ -180,3 +180,8 @@ mat-footer-row mat-footer-cell {
 .radio-button{
     margin: 1px;
 }
+
+.required-field::before {
+    content: "*";
+    color: red;
+  }
