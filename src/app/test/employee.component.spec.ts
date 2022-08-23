@@ -96,7 +96,15 @@ export class MatDialogMock {
   component.getAllemployee();
  });
 
-     /* Html testen*/
+ it('should call editEmployee ', ()=>{
+  let e = new employe();
+  e.fullName='rabeb';
+  e.email='rabeb@gmail.com'
+  spyOn(component,'editEmployee').and.callThrough();
+  component.editEmployee(e);
+  expect(component.editEmployee).toHaveBeenCalled();
+  expect(e).toEqual(jasmine.objectContaining({fullName: 'rabeb' }));
+ })
     
 
   });

@@ -1,5 +1,5 @@
  import { HttpClientModule } from '@angular/common/http';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,8 +22,8 @@ export class MatDialogMock {
  describe('DepartmentComponent', () => {
    let component: DepartmentComponent;
    let fixture: ComponentFixture<DepartmentComponent>;
-
-   beforeEach(async () => {
+   let service: DepServService;
+   beforeEach(async (() => {
     TestBed.configureTestingModule({
       imports: [
         HttpClientModule, 
@@ -47,12 +47,13 @@ export class MatDialogMock {
      component.ngOnInit();
      fixture.whenStable();
     fixture.detectChanges();
-   });
+   }));
 
    it('should call ngOnInit', () => {
     let spy_getAllActivity=spyOn(component,"getAllActivity").and.returnValue();
     component.ngOnInit();
     expect(component.getAllActivity);
+    expect(spy_getAllActivity).toHaveBeenCalled();
   });
 
 it('should set the dataSource filter to the provided argument', () => {
@@ -62,7 +63,8 @@ it('should set the dataSource filter to the provided argument', () => {
   expect(component.applyFilter);
     
   })
-   it('should create', () => {
-    expect(component).toBeTruthy();
-   });
+  it('should open the dialog', () => {
+    component.openDialog();
+  });
+  
  });

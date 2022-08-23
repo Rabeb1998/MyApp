@@ -7,6 +7,7 @@ import {card} from '../../models/card'
 })
 export class DashboardServiceService {
   constructor(private http : HttpClient) {}
+  
   getImg(imageUrl: string): Observable<Blob>{
     return this.http.get(imageUrl, {responseType: 'blob'});
   }
