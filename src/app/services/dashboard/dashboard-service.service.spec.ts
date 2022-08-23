@@ -6,7 +6,6 @@ describe('DashboardServiceService', () => {
   let service: DashboardServiceService;
 
   beforeEach(() => {
-  service =new DashboardServiceService();
   });
 
   it('should be created', () => {

@@ -4,5 +4,17 @@
         <img [src]="img" alt="" width="150" height="50">
         
     </a>
-    </div>
+    
+    <mat-form-field > 
+      <mat-select (valueChange)="sendCurrency($event)" class="text-sm" [(ngModel)]="selectedCurrency">
+          <mat-option selected value="Actia">Actia</mat-option>
+          <mat-option  value="">About</mat-option>
+          <mat-option  value="">Contact</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+    
+
   </nav>

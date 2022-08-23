@@ -1,9 +1,35 @@
-.stats-cards {
-    .mat-card {
-      overflow: hidden;
+.header{
+    height:40%;
+    display:flex ;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    color: aliceblue;
+    h2{
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 3.75rem;
+        line-height: 1.2;
+        letter-spacing: -0.0083em;
+
     }
-  }
-  
-  table {
+    h5{ 
+        color:aliceblue;
+        text-transform: capitalize;
+        font-size: 0.8rem;
+        font-size: 500;
+        line-height: 1.57;
+        letter-spacing: 0.00714em;
+        font-weight: bold;
+    }
+}
+.banner{
+    background-image: url("../../assets/ARDIA.jpg");
+    height: 350px;
     width: 100%;
-  }
+}
+.sub-header{
+    height: 50%;
+    display: flex;
+    align-items: center;
+}

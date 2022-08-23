@@ -34,6 +34,7 @@ import { HelpListComponent } from './helps/help-list/help-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SeeAllComponent } from './helps/see-all/see-all.component';
 import { NewComponent } from './helps/new/new.component';
+import { DetailComponent } from './dashboard/detail/detail.component';
 
 
 @NgModule({
@@ -51,6 +52,8 @@ import { NewComponent } from './helps/new/new.component';
     NavbarComponent,
     SeeAllComponent,
     NewComponent,
+ 
+    DetailComponent,
     
    
   ],
